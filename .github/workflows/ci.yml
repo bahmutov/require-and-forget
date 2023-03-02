@@ -1,0 +1,10 @@
+name: ci
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    name: Build and test
+    steps:
+      - uses: actions/checkout@v3
+      - uses: bahmutov/npm-install@v1
+      - run: npm t
