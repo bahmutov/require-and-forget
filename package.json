@@ -39,11 +39,12 @@
     "deps": "npm audit --report --omit dev"
   },
   "devDependencies": {
-    "mocha": "10.2.0",
-    "prettier": "2.8.4",
-    "semantic-release": "^20.1.1"
+    "better-assert": "1.0.2",
+    "mocha": "12.0.1",
+    "prettier": "3.9.7",
+    "semantic-release": "^25.0.9"
   },
   "dependencies": {
-    "debug": "4.3.4"
+    "debug": "4.4.3"
   }
 }
