@@ -41,14 +41,25 @@ const r2 = forget('./random')
 // "random.js" will not be stored in the require.cache
 ```
 
+## Custom require function
+
+You can provide your own custom function to load Node modules by setting a global variable
+
+```js
+const forget = require('require-and-forget')
+forget.__require_fn = (module) => {
+  // do whatever you want
+}
+```
+
 ## Related projects
 
-* [unload-me](https://github.com/bahmutov/unload-me) - the module itself forces Node's cache
+- [unload-me](https://github.com/bahmutov/unload-me) - the module itself forces Node's cache
   to delete it after loading. Kind of `self-destruct`.
-* [Playing havoc with Node module system](https://glebbahmutov.com/blog/playing-havoc-with-node-module-system/)
-* [Hacking Node require](https://glebbahmutov.com/blog/hacking-node-require/)
-* [Faster Node app require](https://glebbahmutov.com/blog/faster-node-app-require/)
-* [node-hook](https://github.com/bahmutov/node-hook) - Run source transform function on node require call.
+- [Playing havoc with Node module system](https://glebbahmutov.com/blog/playing-havoc-with-node-module-system/)
+- [Hacking Node require](https://glebbahmutov.com/blog/hacking-node-require/)
+- [Faster Node app require](https://glebbahmutov.com/blog/faster-node-app-require/)
+- [node-hook](https://github.com/bahmutov/node-hook) - Run source transform function on node require call.
 
 ## Debug
 
@@ -58,9 +69,9 @@ Run code with `DEBUG=require-and-forget` environment variable
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2017
 
-* [@bahmutov](https://twitter.com/bahmutov)
-* [glebbahmutov.com](https://glebbahmutov.com)
-* [blog](https://glebbahmutov.com/blog)
+- [@bahmutov](https://twitter.com/bahmutov)
+- [glebbahmutov.com](https://glebbahmutov.com)
+- [blog](https://glebbahmutov.com/blog)
 
 License: MIT - do anything with the code, but don't blame me if it does not work.
 
