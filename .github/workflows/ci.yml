@@ -4,6 +4,15 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     name: Build and test
+    permissions:
+      # allow the release step to comment on
+      # issues, pull requests, and write to the repo
+      contents: write
+      issues: write
+      pull-requests: write
+      # Required for OIDC to let NPM registry know
+      # that this workflow is trusted
+      id-token: write
     steps:
       - uses: actions/checkout@v7
         # https://github.com/bahmutov/npm-install
